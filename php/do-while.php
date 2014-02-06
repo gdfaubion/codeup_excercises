@@ -1,12 +1,12 @@
 <?php
 
-$x = 100;
+$a = 2;
 
 do {
 
-	echo "\$x is equal to $x\n";
-	$x -= 5;
+	echo "\$a is equal to $a\n";
+	$a *= $a;
 
-} while ($x >= -10);
+} while ($a <= 1000000);
 
 
