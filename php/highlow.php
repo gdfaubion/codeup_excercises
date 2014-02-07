@@ -1,7 +1,7 @@
 <?php
 // pick random # between 1 - 100
 
-$answer = rand(1, 100);
+$answer = mt_rand(1, 100);
 
 fwrite(STDOUT, 'Guess a number between 1 and 100 ');
 
@@ -23,6 +23,7 @@ do {
 		}
 
 } while ($number !== $answer);
+
 
 
 
