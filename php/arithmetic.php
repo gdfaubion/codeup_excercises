@@ -1,10 +1,14 @@
 <?php
 
+function error($err_msg = 'You have an error!' ) {
+		echo "!!!ERROR!!! Both inputs must be numeric!\n";
+	}
+
 function add($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		echo $a + $b . "\n";
 	} else {
-		echo "!!!ERROR!!! You have $a and $b, but both inputs must be numeric!\n";
+		error();
 	}
 }
 
@@ -12,7 +16,7 @@ function subtract($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		echo $a - $b . "\n";
 	} else {
-		echo "!!!ERROR!!! You have $a and $b, but both inputs must be numeric!\n";
+		error();
 	}   
 }
 
@@ -20,7 +24,7 @@ function multiply($a = 1, $b = 1) {
 	if(is_numeric($a) && is_numeric($b)) {
 		echo $a * $b . "\n";
 	} else {
-		echo "!!!ERROR!!! You have $a and $b, but both inputs must be numeric!\n";
+		error();
 	}   
 }
 
@@ -32,7 +36,7 @@ function divide($a = 1, $b = 1) {
 		echo $a / $b . "\n";
 		
 	} else {
-		echo "!!!ERROR!!! You have $a and $b, but both inputs must be numeric!\n";
+		error();
 	}   
 }
 
@@ -40,15 +44,15 @@ function modulus($a = 0, $b = 0) {
 	if(is_numeric($a) && is_numeric($b)) {
 		echo $a % $b . "\n";
 	} else {
-		echo "!!!ERROR!!! You have $a and $b, but both inputs must be numeric!\n";
+		error();
 	}
 	
 }
 
 
-add(5);
+add(5, 9);
 
-subtract(35, 19);
+subtract('Sandy', 19);
 
 multiply(7, 6);
 
