@@ -1,34 +1,42 @@
 <?php
+// create an array of $books
 
 $books = array(
-	'The Hobbit' => array(
-		'Published' => 1937,
-		'Author' => 'J.R.R. Tolkien',
-		'Pages' => 310
-	),
-	'Game of Thrones' => array(
-		'Published' => 1996,
-		'Author' => 'George R. R. Martin',
-		'Pages' => 835
-	),
-	'The Catcher in the Rye' => array(
-		'Published' => 1951,
-		'Author' => 'J. D. Salinger',
-		'Pages' => 220
-	),
-	'A Tale of Two Cities' => array(
-		'Published' => 1859,
-		'Author' => 'Charles Dickens',
-		'Pages' => 544
-	)
+    'The Hobbit' => array(
+        'published' => 1937,
+        'author' => 'J.R.R. Tolkien',
+        'pages' => 310
+        ),
 
-);
+    'Game of Thrones' => array(
+        'published' => 1996,
+        'author' => 'George R.R. Martin',
+        'pages' => 835
+        ),
+
+    'The Catcher in the Rye' => array(
+        'published' => 1951,
+        'author' => 'J.D. Salinger',
+        'pages' => 220
+        ),
+
+    'A Tale of Two Cities' => array(
+        'published' => 1859,
+        'author' => 'Charles Dickens',
+        'pages' => 544
+        ),
+    );
+
 
 foreach ($books as $title => $book) {
-	echo "$title\n";
-	foreach ($book as $key => $value) {
-		echo "$key $value\n"; 
-	}
 
+    if ($book['published'] > 1950) {
+        echo "$title\n";
+        echo "  Published: " . $book['published'] . "\n";
+        echo "  Author: " . $book['author'] . "\n";
+        echo "  Pages: " . $book['pages'] . "\n";
+    }
 }
-	
+
+
+?>
