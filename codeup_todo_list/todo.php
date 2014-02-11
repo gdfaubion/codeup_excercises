@@ -31,6 +31,7 @@ do {
         // Get array key
         $key = trim(fgets(STDIN));
         // Remove from array
+        $key--;
         unset($items[$key]);
     }
 // Exit when input is (Q)uit
