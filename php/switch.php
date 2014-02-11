@@ -6,30 +6,31 @@ date_default_timezone_set('America/Chicago');
 
  //Get Day of Week as number
  //1 (for Monday) through 7 (for Sunday)
-$day_of_week = date('N');
+$day_of_week = mt_rand(1, 7);
 
 switch($day_of_week) {
     case 1:
-        echo "Monday\n";
-        break;
+      echo "Monday\n";
+      break;
     case 2: 
-        echo "Tuesday\n";
-        break;
+      echo "Tuesday\n";
+      break;
     case 3:
-		echo "Wednesday\n";
-		break;    	
+		  echo "Wednesday\n";
+		  break;    	
     case 4:
     	echo "Thursday\n";
     	break;
     case 5:
     	echo "Friday\n";
     	break;
-    case 6:
-    	echo "Saturday\n";
-    	break;
-    case 7:
-    	echo "Friday\n";
-    	break;
+
+      default:
+      echo "It's the weekend!\n";
+      
 }
 
 
+
+
+?>
