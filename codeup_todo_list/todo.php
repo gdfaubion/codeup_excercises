@@ -8,6 +8,7 @@ do {
     // Iterate through list items
     foreach ($items as $key => $item) {
         // Display each item and a newline
+        $key++;
         echo "[{$key}] {$item}\n";
     }
 
