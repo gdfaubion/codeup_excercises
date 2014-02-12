@@ -1,67 +1,55 @@
 <?php
 
-function error($err_msg = 'You have an error!' ) {
-		echo "!!!ERROR!!! Both inputs must be numeric!\n";
+function paramsAreValid($a, $b) {
+	return (is_numeric($a) && is_numeric($b));
+}
+
+function add($a, $b) {
+	if (paramsAreValid($a, $b)) {
+		return $a + $b;
+	} else {
+		return 0;
 	}
+}
 
-function add($a = 0, $b = 0) {
-	if(is_numeric($a) && is_numeric($b)) {
-		echo $a + $b . "\n";
+function subtract($a, $b) {
+	if (paramsAreValid($a, $b)) {
+		return $a - $b;
 	} else {
-		error();
+		return 0;
 	}
 }
 
-function subtract($a = 0, $b = 0) {
-	if(is_numeric($a) && is_numeric($b)) {
-		echo $a - $b . "\n";
+function multiply($a, $b) {
+	if (paramsAreValid($a, $b)) {
+		return $a * $b;
 	} else {
-		error();
-	}   
+		return 0;
+	}	
 }
 
-function multiply($a = 1, $b = 1) {
-	if(is_numeric($a) && is_numeric($b)) {
-		echo $a * $b . "\n";
-	} else {
-		error();
-	}   
+function divide($a, $b) {
+	if (paramsAreValid($a, $b)) {
+		if ($b != 0) {
+			return $a / $b;
+		} else {
+			return 0;
+		}
+	}		
 }
 
-function divide($a = 1, $b = 1) {
-	if($a == 0 || $b == 0){
-		echo "!!!Error!!! Cannot divide by 0!\n";
-
-	}elseif(is_numeric($a) && is_numeric($b)) {
-		echo $a / $b . "\n";
-		
+function modulus($a, $b) {
+	if (paramsAreValid($a, $b)) {
+		return $a % $b;
 	} else {
-		error();
-	}   
-}
-
-function modulus($a = 0, $b = 0) {
-	if(is_numeric($a) && is_numeric($b)) {
-		echo $a % $b . "\n";
-	} else {
-		error();
+		return 0;
 	}
-	
 }
 
-
-add(5, 9);
-
-subtract('Sandy', 19);
-
-multiply(7, 6);
-
-divide(15, 0);
-
-modulus(10, 'John');
-
-
-
-
+add(20, 5);
+subtract(10, 2);
+multiply(9, 5);
+divide(20, 2);
+modulus(30, 3);
 
 ?>
