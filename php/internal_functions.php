@@ -12,6 +12,14 @@ function setOrEmpty($var) {
 	}
 }
 
-setOrEmpty($nothing);
-setOrEmpty($something);
-setOrEmpty($array);
+if(empty($nothing)) {
+	echo "\$nothing is empty\n";
+} elseif(isset($nothing)) {
+	echo "\$nothing is set\n";
+}
+
+if(isset($something)) {
+	echo "\$something is set\n";
+}
+
+ setOrEmpty($array);
