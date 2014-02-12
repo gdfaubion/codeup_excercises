@@ -23,3 +23,12 @@ if(isset($something)) {
 }
 
  setOrEmpty($array);
+
+ $serializeArray = serialize($array);
+ echo $serializeArray . PHP_EOL;
+
+ $unserializeArray = unserialize($serializeArray);
+ var_dump($unserializeArray);
+
+ 
+ 
