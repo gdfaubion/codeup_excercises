@@ -41,21 +41,31 @@ do {
         echo 'Enter item: ';
         // Add entry to list array
         $items[] = get_input();
+        if(count($items) > 1) {
+            echo "Would you like to add this item to the (B)eggining or (E)nd of your list?\n";
+            $input = get_input(TRUE);
+        }elseif($input == 'B') {
+            array_unshift($items, $input);
+        } elseif($input == 'E') {
+            array_push($itmes, $input);
+            }
     } elseif ($input == 'R') {
         // Remove which item?
         echo 'Enter item number to remove: ';
         // Get array key
         $key = get_input();
         // Remove from array
-        
         unset($items[$key - 1]);
     } elseif ($input == 'S') {
         //sort $items from A-Z
         sort($items);
-
     } elseif ($input == 'Z') {
         //sort from Z-A
         rsort($items);
+    }  elseif ($input == 'F') {
+        array_shift($items);
+    } elseif ($input == 'L') {
+        array_pop($itmes);
     }
 // Exit when input is (Q)uit
 } while ($input != 'Q');
