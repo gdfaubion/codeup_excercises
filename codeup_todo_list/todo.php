@@ -29,7 +29,7 @@ do {
     echo list_items($items);
 
     // Show the menu options
-    echo '(N)ew item, (R)emove item, (S)ort from A-Z, (Z)Sort from Z-A, (Q)uit : ';
+    echo '(N)ew item, (R)emove item, (S)ort from A-Z, (Z)Sort from Z-A, (O)pen file, (Q)uit : ';
 
     // Get the input from user
     // Use trim() to remove whitespace and newlines
@@ -66,7 +66,14 @@ do {
         array_shift($items);
     } elseif ($input == 'L') {
         array_pop($itmes);
-    }
+    } elseif($input = 'O') {
+        echo "Enter file name" . PHP_EOL;
+        $which_file = get_input();
+        $handle = fopen($which_file, "r");
+        $contents = fread($handle, filesize($which_file));
+        fclose($handle);
+        return $items = explode("\n", $contents); 
+}
 // Exit when input is (Q)uit
 } while ($input != 'Q');
 
