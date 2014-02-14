@@ -72,7 +72,7 @@ do {
         $handle = fopen($which_file, "r");
         $contents = fread($handle, filesize($which_file));
         fclose($handle);
-        return $items = explode("\n", $contents); 
+        $items = explode("\n", $contents); 
 }
 // Exit when input is (Q)uit
 } while ($input != 'Q');
