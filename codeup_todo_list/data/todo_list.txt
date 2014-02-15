@@ -1,5 +1,7 @@
+
+feed the cat
 Take out the trash
 Make the bed 
 Buy some milk
 Train a Markov chain
-Teah the dog binary
+Teach the dog binary
